@@ -1,0 +1,29 @@
+server:
+  port: ${BOT_MON_PORT:8080}
+
+spring:
+  mvc:
+    locale: en
+  application:
+    name: botmon
+  cloud:
+
+  messages:
+    encoding: UTF-8
+    basename: "classpath:/i18n/messages"
+
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:${DB_PATH:./sqlite/}botmon.db
+
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+
+bot:
+  token: ${BOT_TOKEN:}
+  user: ${BOT_USER:RgsDisBot}
+  password: ${BOT_PWD:12345}
+  key: bb2e5650-3483-4416-83fa-a74ff4c7b9e8

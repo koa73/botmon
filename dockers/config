@@ -1,0 +1,11 @@
+SERVICE_NAME=botmon
+LOG_PATH=/usr/local/botmon/log
+ROOTDIR=/usr/local/botmon
+#
+############################### BOTMON CUSTOM VARIABLES ####################
+BOT_MON_PORT=8226
+BOT_TOKEN=
+BOT_USER=RgsDisBot
+BOT_PWD=12345
+DB_PATH=/usr/local/botmon/sqlite/
+
