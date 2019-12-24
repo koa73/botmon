@@ -15,7 +15,7 @@ Telegram Bot для доставки алерт сообщении с инфор
 
 ---
 
-# Собираем Docker:
+ Собираем Docker:
 
 _docker build -t <имя докера> ._
 
@@ -27,8 +27,8 @@ _docker build -t <имя докера> ._
 _docker volume create botmon_vol_ 
 
 Помещаем в него файл с пустой БД (находится в каталоге ../sqlite) :
-
-_cp ../sqlite/botmon.db  /var/lib/docker/volumes/botmon_vol/_data/_
+_
+cp ../sqlite/botmon.db  /var/lib/docker/volumes/botmon_vol/_data/_
 
 Запускаем Docker : 
 
