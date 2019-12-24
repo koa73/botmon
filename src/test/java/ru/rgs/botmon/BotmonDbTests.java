@@ -14,11 +14,6 @@ import ru.rgs.botmon.service.bot.BotMonImpl;
 
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -67,20 +62,4 @@ public class BotmonDbTests {
 		assert (repository.getChatId("000000000") == null);
 	}
 
-	@Test
-	public void phoneTest(){
-		String strarg = "9162341423,9162341423,9162341423";
-		Set<String> setString = new HashSet<>();
-
-		for (String str: strarg.replaceAll("^,?","").split(",")){
-
-			setString.add(str);
-			System.out.println("-- "+str);
-		}
-
-		System.out.println(setString.size());
-		for (String str: setString){
-			System.out.println("-- "+str);
-		}
-	}
 }

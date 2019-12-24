@@ -26,4 +26,4 @@ bot:
   token: ${BOT_TOKEN:}
   user: ${BOT_USER:RgsDisBot}
   password: ${BOT_PWD:12345}
-  key: bb2e5650-3483-4416-83fa-a74ff4c7b9e8
+  key: ${BOT_REST_KEY:bb2e5650-3483-4416-83fa-a74ff4c7b9e8}
