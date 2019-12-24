@@ -43,4 +43,10 @@ _http://<имя хоста>:8226/rest/send/?from=<Отправитель>&phone=
  200
  Ок
  
- 4xx, 5xx {"error":"User(s) [89225137185, 89264177182] not found.", "cause":"ru.rgs.botmon.service.bot.BotMonImpl"}
+ или
+ 
+ 4xx, 5xx 
+ 
+ например
+ 
+ {"error":"User(s) [89225137185, 89264177182] not found.", "cause":"ru.rgs.botmon.service.bot.BotMonImpl"}
