@@ -6,12 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.rgs.botmon.config.Messages;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.ConstraintViolationException;
-import java.util.Collections;
-import java.util.Map;
 
 /**
  *
@@ -21,29 +17,6 @@ import java.util.Map;
 @ControllerAdvice
 @Component
 public class GlobalExceptionHandler {
-
-    //private final Logger log = LoggerFactory.getLogger(getClass());
-
-    @Autowired
-    Messages messages;
-
-
-//    @ExceptionHandler(ConstraintViolationException.class)
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    public String validationHandler( ConstraintViolationException ex, Model model) {
-//
-//        model.addAttribute("errorMsg", "Request validation error.");
-//        return "error";
-//    }
-
-
-    @ExceptionHandler(WebApiException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public String webHandler(WebApiException ex, Model model) {
-
-        model.addAttribute("errorMsg", ex.getMessage());
-        return "error";
-    }
 
 
     @ExceptionHandler(RestApiException.class)
@@ -61,11 +34,6 @@ public class GlobalExceptionHandler {
     public String exception(final Throwable throwable) {
         final String error = (throwable.getMessage() != null)?throwable.getMessage():"Unknown error";
         return new RestApiException(error, throwable.getClass().getName()).toString();
-    }
-
-    // ???
-    private Map error(Object message) {
-        return Collections.singletonMap("error", message);
     }
 
 }
