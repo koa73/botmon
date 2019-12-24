@@ -28,7 +28,7 @@ _docker volume create botmon_vol_
 
 Помещаем в него файл с пустой БД (находится в каталоге ../sqlite) :
 
- cp ../sqlite/botmon.db  /var/lib/docker/volumes/botmon_vol/_data/_
+ _cp ../sqlite/botmon.db  /var/lib/docker/volumes/botmon_vol/__data/_
 
 Запускаем Docker : 
 
