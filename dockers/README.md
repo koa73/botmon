@@ -30,7 +30,7 @@ _docker volume create botmon_vol_
 
 _cp ../sqlite/botmon.db  /var/lib/docker/volumes/botmon_vol/_data/_
 
-Запускаем Докер : 
+Запускаем Docker : 
 
 _docker run -d --name botmon --mount source=botmon_vol,target=/usr/local/botmon/sqlite -p 8226:8226 <имя докера>_
 
