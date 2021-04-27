@@ -157,7 +157,7 @@ public class BotMonImpl extends TelegramLongPollingBot implements BotMon {
 
     private void sendMessage(long chatId, String text) throws TelegramApiException {
 
-        text = text.replaceAll("[\\\\~*'_/]", " ");
+        text = text.replaceAll("[\\\\~*'_]", " ");
         SendMessage message = new SendMessage()
                 .enableMarkdown(true)
                 .setChatId(chatId)
