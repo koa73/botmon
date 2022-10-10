@@ -15,13 +15,14 @@ RUN mkdir /usr/local/botmon \
     && mkdir /usr/local/botmon/sqlite \
     && mkdir /usr/local/botmon/run
 
+COPY botmon_entrypoint.sh /usr/local/botmon/
 COPY botmon.sh /usr/local/botmon/
 COPY config /usr/local/botmon/etc/
 COPY botmon.jar /usr/local/botmon/bin/
 
 RUN chmod +x /usr/local/botmon/botmon.sh
 
-ENTRYPOINT /usr/local/botmon/botmon.sh start && tail -f /usr/local/botmon/log/botmon.log
+ENTRYPOINT /usr/local/botmon/botmon_docker.sh
 
 EXPOSE 8226
 
